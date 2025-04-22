@@ -1,3 +1,9 @@
+:root {
+    --header-bg: color(display-p3 0.5451 0.8157 0.9647);
+    --link-accent: hsl(340, 75%, 45%);
+    --link-hover: color-mix(in srgb, var(--link-accent) 60%, white 40%);
+}
+
 html, body {
     /* Body styling */
     background-color: #ffffff;
@@ -7,11 +13,18 @@ html, body {
     height: 100%;
 }
 
+
+/* -------------------------HEADER STYLES----------------------------------- */
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 2rem;
+    background-color: var(--header-bg, #000000);
+    margin: 0 auto 2rem auto;
+    border: 2px solid black;
+    border-radius: 12px;
 }
 
 header hr {
@@ -21,16 +34,33 @@ header hr {
 
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 8rem;
     list-style: none;   
     padding: 0;
-    margin: 0.5rem 0;
+    margin-top: 50px;
 }
 
 nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:active {
+    color: rgb(223, 76, 115);
+}
+
+.title {
+    color: black;
+    font-size-adjust: 0.7;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------- */
+
 
 main > div {
     display: grid;
