@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     --header-bg: color(display-p3 0.5451 0.8157 0.9647);
     --link-accent: hsl(340, 75%, 45%);
@@ -11,8 +13,20 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+h2 + p, h2 ~ p {
+    margin-top: 0.25rem;
+}
 
 /* -------------------------HEADER STYLES----------------------------------- */
 
@@ -23,13 +37,18 @@ header {
     padding: 1rem 2rem;
     background-color: var(--header-bg, #000000);
     margin: 0 auto 2rem auto;
-    border: 2px solid black;
+    border: 0.4mm solid black;
     border-radius: 12px;
 }
 
 header hr {
     width: 100%;
     margin: 1rem 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -57,6 +76,7 @@ nav a:active {
     color: black;
     font-size-adjust: 0.7;
     font-weight: bold;
+    margin-bottom: 0.1cm;
 }
 
 /* --------------------------MAIN STYLES----------------------------- */
@@ -112,7 +132,90 @@ main > div > section:hover {
 /* --------------------------FOOTER STYLES----------------------------- */
 
 footer {
-    text-align: center;
+    position: relative;
+    background-color: rgba(230, 240, 255, 0.9);
+    margin: 2rem auto 0 auto;
     padding: 2rem;
-    background-color: hsl(210, 20%, 95%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer > section#form {
+    border-width: 2px;
+    border-style: groove;
+    border-color: hsl(200, 80%, 60%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+}
+
+footer form input[type="text"],
+footer form textarea {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    border-radius: 4px;
+}
+
+footer form input[type="checkbox"],
+footer form input[type="radio"] {
+    margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+footer form input[type="checkbox"]:hover + label,
+footer form input[type="radio"]:hover + label {
+    text-decoration: underline;
+}
+
+footer form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--link-accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background-color: color-mix(in srgb, var(--link-accent) 70%, black 30%);
+}
+
+footer form button:active {
+    background-color: white;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer form {
+    button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--link-accent);
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--link-accent) 70%, black 30%);
+        }
+        &:active {
+            background-color: white;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
 }
