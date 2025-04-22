@@ -1,3 +1,55 @@
-.html, body {
-    background-color: #e6e6e6;
+html, body {
+    /* Body styling */
+    background-color: #ffffff;
+    color: rgb(223, 76, 115);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header hr {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;   
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+main #media {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: hsl(210, 20%, 95%);
 }
