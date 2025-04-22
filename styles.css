@@ -59,7 +59,7 @@ nav a:active {
     font-weight: bold;
 }
 
-/* --------------------------------------------------------------- */
+/* --------------------------MAIN STYLES----------------------------- */
 
 
 main > div {
@@ -77,6 +77,39 @@ main #media {
     align-items: center;
     justify-content: center;
 }
+
+main > div > section {
+    padding: 1.25rem 2rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px hsl(0 0% 0% / 0.15);
+}
+
+#attendance ul, #agenda ol {
+    margin-top: 0.5em;
+    padding-left: 1.5rem;
+}
+
+/* Switch to single column on small screens */
+@media (max-width: 600px) {
+    main > div {
+        grid-template-columns: 1fr;
+    }
+}
+
+section:has(details) {
+    border-color: var(--link-accent);
+}
+
+main > div > section:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+
+
+/* --------------------------FOOTER STYLES----------------------------- */
 
 footer {
     text-align: center;
